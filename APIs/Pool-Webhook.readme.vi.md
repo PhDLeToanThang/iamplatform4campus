@@ -43,4 +43,4 @@ Webhooks hoạt động theo cơ chế **"đẩy" (push-based)**. Thay vì liên
 ### **Phương Pháp Kết Hợp (Hybrid Approach)**  
 Giải pháp thực tế nhất thường là kết hợp cả hai: sử dụng Webhooks làm phương pháp chính và Polling như một phương án dự phòng để đảm bảo hệ thống vẫn hoạt động khi webhook gặp sự cố.
 
-
+![image](https://media.licdn.com/dms/image/v2/D4D22AQE84xVF0ao6Ew/feedshare-shrink_2048_1536/B4DZcklm6YH4Ao-/0/1748665603075?e=2147483647&v=beta&t=2Y-5KekkFD9epgUe2XRTxM4eXqTW8qT1hU_CmcTZM34)
