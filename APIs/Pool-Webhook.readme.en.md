@@ -31,3 +31,5 @@ Two common methods for enabling this communication are 𝗣𝗼𝗹𝗹𝗶𝗻�
 𝗪𝗲𝗯𝗵𝗼𝗼𝗸𝘀 are ideal for event-driven architectures where real-time responsiveness is a priority, such as chat systems, payment notifications, or CI/CD pipelines.
 
 **𝗔 𝗵𝘆𝗯𝗿𝗶𝗱 𝗮𝗽𝗽𝗿𝗼𝗮𝗰𝗵** is often the most practical solution. Implementing Webhooks as the primary method with polling as a fallback ensures resilience in cases where webhook delivery fails.
+
+![image](https://media.licdn.com/dms/image/v2/D4D22AQE84xVF0ao6Ew/feedshare-shrink_2048_1536/B4DZcklm6YH4Ao-/0/1748665603075?e=2147483647&v=beta&t=2Y-5KekkFD9epgUe2XRTxM4eXqTW8qT1hU_CmcTZM34)
