@@ -2,9 +2,9 @@
 
 >> Tôi đang có:
 - 01 vCenter Appliance v8.0u3 VM chạy ở dải ipv4 thuộc Management Layer network (ipv4 192.168.100.98), 
-- 01 AD Primary Domain v2016 (ipv4 192.168.100.20) và chạy delegated với 
-- 01 AD Backup domain v2019 (ipv4 192.168.100.25). 
-
+- 01 AD Primary Domain v2016 (ipv4 192.168.100.20) domain: cloud.local và chạy delegated với 
+- 01 AD Backup domain v2019 (ipv4 192.168.100.25) domain: cloud.local. 
+- 01 AD Primary Domain v2019 (ipv4 192.168.100.50) domain: company.local
  Có thể hướng dẫn chi tiết từng bước việc lựa chọn các phương án hợp lý, phù hợp cho tích hợp SSO, phân quyền bằng Group name của AD user, groups, gpo và Username sẽ theo email duy nhất để tránh cách dùng UPN khi có nhiều Multi-Domain AD Local? 
  - Về các tiêu chí để chọn phương án hợp lý cần đáp ứng kỹ thuật mô hình kết nối LDAPs tạo iDP trên vCenter support qua LDAP/s và cấu hình SAML2 hoặc OpenID connect để cấu hình.
 
@@ -160,13 +160,8 @@ Tuyệt vời! Mình sẽ giải thích rõ ràng và dễ hiểu về **SAML2**
 
 ---
 
-Bạn có muốn mình tạo thêm **mẫu cấu hình SAML2 với Keycloak hoặc ADFS cho vCenter** không?
-
----
-
 >> Làm thế nào để cấu hình Keycloak với vCenter?
-
-hướng dẫn từng bước để cấu hình Keycloak làm Identity Provider (iDP) sử dụng SAML2 để tích hợp với vCenter 7.x/8.x:
+_hướng dẫn từng bước để cấu hình Keycloak làm Identity Provider (iDP) sử dụng SAML2 để tích hợp với vCenter 7.x/8.x:_
 
 🧩 Tổng quan kiến trúc:
 
@@ -230,30 +225,47 @@ hướng dẫn từng bước để cấu hình Keycloak làm Identity Provider 
 
 - Gán user vào các Group nếu bạn muốn phân quyền theo Group trong vCenter.
 
-📄 Bước 3: Export Metadata từ Keycloak
-Truy cập:
-https://<keycloak-host>:8443/auth/realms/<realm-name>/protocol/saml/descriptor
-Tải file XML metadata này để import vào vCenter.
-⚙️ Bước 4: Cấu hình vCenter để sử dụng Keycloak làm iDP
-Truy cập vCenter → Administration → Single Sign-On → Configuration → Identity Provider.
-Chọn SAML Identity Provider (iDP) → Add.
-Nhập thông tin:
-Alias: keycloak
-SAML Metadata: import file XML từ Keycloak.
-Nhấn Save.
-🧪 Bước 5: Kiểm tra đăng nhập
-Truy cập vCenter → chọn Use external identity provider.
-Chọn Keycloak → đăng nhập bằng user Keycloak.
-Nếu thành công, bạn sẽ được chuyển về vCenter với quyền tương ứng.
+📄 Bước 3: Export Metadata từ Keycloak:
+
+- Truy cập: https://<keycloak-host>:8443/auth/realms/<realm-name>/protocol/saml/descriptor
+
+- Tải file XML metadata này để import vào vCenter.
+  
+⚙️ Bước 4: Cấu hình vCenter để sử dụng Keycloak làm iDP:
+
+- Truy cập vCenter → Administration → Single Sign-On → Configuration → Identity Provider.
+
+- Chọn SAML Identity Provider (iDP) → Add.
+	
+	- Nhập thông tin:
+   	
+   	- Alias: keycloak
+   	  
+	- SAML Metadata: import file XML từ Keycloak.
+
+	- Nhấn Save.
+   
+🧪 Bước 5: Kiểm tra đăng nhập:
+
+- Truy cập vCenter → chọn Use external identity provider.
+  
+- Chọn Keycloak → đăng nhập bằng user Keycloak.
+  
+- Nếu thành công, bạn sẽ được chuyển về vCenter với quyền tương ứng.
+  
 🧠 Gợi ý phân quyền theo Group AD (nếu dùng LDAP trong Keycloak)
-Trong Keycloak, đồng bộ Group từ AD.
-Gán Group claim trong SAML assertion.
-Trong vCenter, phân quyền theo Group name từ SAML assertion.
+
+- Trong Keycloak, đồng bộ Group từ AD.
+  
+- Gán Group claim trong SAML assertion.
+  
+- Trong vCenter, phân quyền theo Group name từ SAML assertion.
 
 ---
 
 # Phụ lục: Nhà cung cấp và Giải pháp IAM/PIM/PAM:
-```
+
+```vendors_list
 1. CyberArk:
 - CyberArk Identity Security
 - CyberArk Privileged Access Security
@@ -457,5 +469,5 @@ Trong vCenter, phân quyền theo Group name từ SAML assertion.
 50. Foxpass:
 - Foxpass Identity and Access Management
 - Foxpass Privileged Access Management
---
+```
 
