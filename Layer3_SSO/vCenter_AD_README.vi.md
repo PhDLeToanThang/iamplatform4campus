@@ -94,6 +94,7 @@ Dưới đây là hướng dẫn chi tiết từng bước, kèm theo phân tíc
 
 ***Sơ đồ kiến trúc kết nối giữa vCenter 7.x/8.x, Active Directory (Primary & Backup), và iDP (Keycloak hoặc ADFS) sử dụng LDAPs và OpenID Connect/SAML2:***
 
+![image](https://github.com/PhDLeToanThang/iamplatform4campus/blob/main/Layer3_SSO/SAML2_vCenter_Keycloak.drawio.svg)
 
 ---
 
