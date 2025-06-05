@@ -5,12 +5,13 @@
 - 01 AD Primary Domain v2016 (ipv4 192.168.100.20) domain: cloud.local và chạy delegated với 
 - 01 AD Backup domain v2019 (ipv4 192.168.100.25) domain: cloud.local. 
 - 01 AD Primary Domain v2019 (ipv4 192.168.100.50) domain: company.local
- Có thể hướng dẫn chi tiết từng bước việc lựa chọn các phương án hợp lý, phù hợp cho tích hợp SSO, phân quyền bằng Group name của AD user, groups, gpo và Username sẽ theo email duy nhất để tránh cách dùng UPN khi có nhiều Multi-Domain AD Local? 
+ 
+Có thể hướng dẫn chi tiết từng bước việc lựa chọn các phương án hợp lý, phù hợp cho tích hợp SSO, phân quyền bằng Group name của AD user, groups, gpo và Username sẽ theo email duy nhất để tránh cách dùng UPN khi có nhiều Multi-Domain AD Local? 
  - Về các tiêu chí để chọn phương án hợp lý cần đáp ứng kỹ thuật mô hình kết nối LDAPs tạo iDP trên vCenter support qua LDAP/s và cấu hình SAML2 hoặc OpenID connect để cấu hình.
 
 ---
 
-Cảm ơn bạn đã cung cấp thông tin rất chi tiết. Với mô hình bạn đang triển khai, mục tiêu là tích hợp **vCenter 8.0u3** với **Active Directory (AD)** để sử dụng **SSO**, phân quyền theo **Group AD**, và đảm bảo **định danh người dùng duy nhất bằng email** (thay vì UPN) trong môi trường có khả năng mở rộng sang **multi-domain**.
+Với mô hình bạn đang triển khai, mục tiêu là tích hợp **vCenter 8.0** với **Active Directory (AD)** để sử dụng **SSO**, phân quyền theo **Group AD**, và đảm bảo **định danh người dùng duy nhất bằng email** (thay vì UPN) trong môi trường có khả năng mở rộng sang **multi-domain**.
 
 Dưới đây là hướng dẫn chi tiết từng bước, kèm theo phân tích các phương án phù hợp với tiêu chí kỹ thuật bạn đưa ra:
 
