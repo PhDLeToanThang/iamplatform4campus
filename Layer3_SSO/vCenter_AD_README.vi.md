@@ -1,4 +1,4 @@
-# Phần 1. Tham khảo các công nghệ iAM Security Platform:
+# Triển khai tích hợp SSO/iAM giữa vCenter với AD(multi-domain) bằng iDP Platform:
 
 >> Tôi đang có:
 - 01 vCenter Appliance v8 VM chạy ở dải ipv4 thuộc Management Layer network (ipv4 192.168.100.98), 
