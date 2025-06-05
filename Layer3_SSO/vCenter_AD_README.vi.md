@@ -1,7 +1,7 @@
 # Phần 1. Tham khảo các công nghệ iAM Security Platform:
 
 >> Tôi đang có:
-- 01 vCenter Appliance v8.0u3 VM chạy ở dải ipv4 thuộc Management Layer network (ipv4 192.168.100.98), 
+- 01 vCenter Appliance v8 VM chạy ở dải ipv4 thuộc Management Layer network (ipv4 192.168.100.98), 
 - 01 AD Primary Domain v2016 (ipv4 192.168.100.20) domain: cloud.local và chạy delegated với 
 - 01 AD Backup domain v2019 (ipv4 192.168.100.25) domain: cloud.local. 
 - 01 AD Primary Domain v2019 (ipv4 192.168.100.50) domain: company.local
@@ -155,9 +155,11 @@ Tuyệt vời! Mình sẽ giải thích rõ ràng và dễ hiểu về **SAML2**
 | Dễ tích hợp               | Trung bình                    | Dễ hơn                        |
 | Hỗ trợ MFA                | Có                            | Có                            |
 | Hỗ trợ phân quyền AD      | Có (qua Group claim)          | Có (qua claim hoặc scope)     |
-| Phù hợp với vCenter       | ✅ (vCenter hỗ trợ chính thức) | ❌ (OIDC chưa hỗ trợ trực tiếp trên vCenter 8.0u3) |
+| Phù hợp với vCenter       | ✅ (vCenter hỗ trợ chính thức) | ✅  (OIDC hỗ trợ trực tiếp trên vCenter 8.0u1,2) |
 
 > 📌 **Lưu ý**: vCenter hiện tại **chính thức hỗ trợ SAML2**, còn **OIDC chưa được hỗ trợ trực tiếp**. Tuy nhiên, bạn có thể dùng OIDC với các ứng dụng khác hoặc thông qua proxy iDP như Keycloak.
+
+![image](https://github.com/user-attachments/assets/2fd2d34c-5388-404f-b067-756c7204af88)
 
 ---
 
@@ -442,7 +444,82 @@ Bạn có muốn mình tạo thêm:
 
 ---
 
-Bạn có muốn mình tạo **sơ đồ minh họa kiến trúc LDAPS với CA nội bộ hoặc Let's Encrypt**, hoặc **mẫu script tự động hóa cấu hình CA và cấp chứng chỉ** không?
+# Phụ lục thời gian hết hạn CERT Expired:
+
+>> Trong máy chủ CA Enterprise có thể cấu hình sao cho cấp phát chữ ký số Cert dài hơn 3 - 5 - 7 - 10 năm và khi đó ký vào LDAPS với chữ ký expired dài hơn 5 - 10 năm ?
+
+Có, bạn **hoàn toàn có thể cấu hình máy chủ CA Enterprise (Windows Server Certificate Authority)** để cấp phát chứng chỉ số (certificate) có thời hạn dài hơn mặc định — ví dụ: **3, 5, 7 hoặc 10 năm**, và sử dụng các chứng chỉ này để **kích hoạt LDAPS (port 636)** cho Active Directory.
+
+Dưới đây là hướng dẫn chi tiết:
+
+---
+
+## ✅ 1. Mặc định thời hạn chứng chỉ trong CA Enterprise
+
+- **CA Root**: mặc định có thể cấp chứng chỉ lên đến 20 năm.
+- **CA cấp trung gian hoặc cấp phát**: mặc định giới hạn thời hạn chứng chỉ theo:
+  - **Thời hạn của CA** (không thể cấp vượt quá thời hạn của chính nó).
+  - **Thời hạn trong template** (Certificate Template).
+  - **Giá trị registry cấu hình CA**.
+
+---
+
+## 🛠️ 2. Cách cấu hình để cấp chứng chỉ có thời hạn dài hơn
+
+### 🔧 Bước 1: Kiểm tra thời hạn của CA
+Mở PowerShell trên máy chủ CA:
+```powershell
+certutil -ca.cert
+```
+→ Kiểm tra thời hạn hết hạn của CA. Bạn không thể cấp chứng chỉ dài hơn thời hạn này.
+
+---
+
+### 🔧 Bước 2: Tùy chỉnh thời hạn trong Certificate Template
+
+1. Mở **Certification Authority** → Chuột phải **Certificate Templates** → **Manage**.
+2. Chọn template bạn đang dùng (VD: `Domain Controller Authentication`) → **Duplicate Template**.
+3. Trong tab **General**:
+   - Đặt tên mới (VD: `LDAPs LongLife`)
+   - **Validity period**: chọn `10 years` hoặc nhập số năm mong muốn.
+   - **Renewal period**: chọn nhỏ hơn thời hạn (VD: 9 years).
+4. Trong tab **Security**:
+   - Cho phép `Domain Controllers` được `Enroll` và `Autoenroll`.
+5. Lưu lại.
+
+---
+
+### 🔧 Bước 3: Cho phép CA cấp chứng chỉ dài hơn mặc định
+
+Trên máy chủ CA, mở PowerShell và chạy:
+```powershell
+certutil -setreg ca\\ValidityPeriodUnits 10
+certutil -setreg ca\\ValidityPeriod Years
+net stop certsvc
+net start certsvc
+```
+
+> ⚠️ Lưu ý: Thời hạn này là giới hạn tối đa CA có thể cấp, nhưng vẫn phụ thuộc vào template.
+
+---
+
+### 🔧 Bước 4: Cấp chứng chỉ mới cho LDAPS
+
+1. Trên Domain Controller, mở `certlm.msc`.
+2. Chuột phải vào **Personal > Certificates** → **All Tasks > Request New Certificate**.
+3. Chọn template `LDAPs LongLife` vừa tạo.
+4. Sau khi cấp, kiểm tra thời hạn chứng chỉ (10 năm).
+5. Khởi động lại dịch vụ AD hoặc máy chủ để LDAPS nhận chứng chỉ mới.
+
+---
+
+## 🔍 Kiểm tra LDAPS hoạt động
+
+- Dùng PowerShell:
+  ```powershell
+  Test-NetConnection -ComputerName localhost -Port 636
+  ```
+- Dùng `ldp.exe` → Connect → Port 636 → SSL ✅
 
 ---
 
