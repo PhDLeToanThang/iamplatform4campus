@@ -6,7 +6,7 @@
 **THẮNG LÊ TOÀN**  
 📍 Hà Nội, Việt Nam  
 🌐 thangletoan.wordpress.com  
-CI/CD: https://github.com/PhDLeToanThang/
+🌐 CI/CD: https://github.com/PhDLeToanThang/
 ✉️ Email: [thang.le@hotmail.com]
 
 ---
@@ -53,8 +53,11 @@ Chuyên gia đào tạo và tư vấn phân tích dữ liệu với hơn 20 năm
 - **Không trực tiếp đào tạo cán bộ Hải quan Việt Nam**, nhưng đào tạo chuyên gia từ các hiệp hội ngành nghề sử dụng dữ liệu Hải quan.
 - **Xây dựng chương trình đào tạo thực hành chuyên sâu**:  
   - MS DTS 2003 → MS SQL DA 2008R2 → MS SQL Ana 2014 → Power BI 2017/2019  
+  
   ref: https://thangletoan.wordpress.com/2013/07/30/lap-trnh-aw-ad-hoc-reporter-lm-bo-co-rdl-trong-sql-server-2008-r2/
+
   - Đóng gói sản phẩm đào tạo: BIS 2012 → BIS 365:
+  
   ref: https://thangletoan.wordpress.com/2013/08/01/bis-2012-con-duong-cho-giai-php-business-intelligence-v-sharepoint-web-application/
 
 ---
