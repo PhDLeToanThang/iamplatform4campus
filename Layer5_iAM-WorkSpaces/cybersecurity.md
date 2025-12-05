@@ -1,4 +1,4 @@
-# Phân tích 
+# Phân tích 3 Giải pháp xác định khả năng đáp ứng:
 >>Tôi có công văn xác nhận phụ lục 1, phụ lục 2 về các yêu cầu tiêu chuẩn kỹ thuật về:
 >> iAM, Security, SSO/MFA/2FA tích hợp các hệ thống giám sát SOC2, NIOC,
 >>các vấn đề AI-ML security của Đơn vị chủ thầu BTC có trên 40 ứng dụng Legacy, .net framework, MVC và
@@ -11,7 +11,6 @@ GP3. Sailpoint.
 >>Hãy phân tích chi tiết, lập bảng so sánh SOW, CAPEX, OPEX, TCO, ROI giữa 3 Giải pháp trên;
 >>Vẽ drawio lược đồ - sơ đồ và quy trình các bước triển khai vận hành của 3 giải pháp theo format Mermaid graph td.
 ---
-
 
 Dựa trên yêu cầu của bạn và tài liệu từ Bộ Tài chính, tôi phân tích 3 giải pháp và lập bảng so sánh chi tiết dưới đây:
 
