@@ -21,7 +21,7 @@ Dựa trên yêu cầu của bạn và tài liệu từ Bộ Tài chính, tôi p
 | **CAPEX (Chi Phí Ban Đầu)** | - License Keycloak (Miễn phí)<br>- Server on-premise: 300M VNĐ<br>- Tích hợp custom: 150M VNĐ | - License Entra ID P2: 2.5 tỷ VNĐ (5 năm)<br>- Sentinel: 1.2 tỷ VNĐ<br>- Azure VM: 800M VNĐ | - License SailPoint: 4.5 tỷ VNĐ (5 năm)<br>- Server: 300M VNĐ<br>- Tư vấn triển khai: 500M VNĐ |
 | **OPEX (Chi Phí Vận Hành)** | - Support HiPT: 500M/năm<br>- Nâng cấp server: 100M/năm | - Azure Subscription: 800M/năm<br>- Support Microsoft: 400M/năm | - Support SailPoint: 600M/năm<br>- Training: 100M/năm |
 | **TCO (5 Năm)**      | **4.25 tỷ VNĐ**                            | **9.5 tỷ VNĐ**                        | **10.5 tỷ VNĐ**    |
-| **ROI (Hiệu Quả Đầu Tư)** | - Tiết kiệm 60% chi phí<br>- Tùy biến cao<br>- Rủi ro vendor lock-in thấp | - Tự động hóa 80% tác vụ<br>- Giảm 50% thời gian phản hồi sự cố | - Tuân thủ 100% chuẩn ISO<br>- Giảm 70% rủi ro nội bộ |
+| **ROI (Hiệu Quả Đầu Tư)** | - Tiết kiệm 60% chi phí<br>- Tùy biến cao<br>- Rủi ro vendor lock-in rất thấp - Tích hợp ElasticSearch/Yolo model AI Assistant dạng AI Private Local tăng cường bảo mật và hỗ trợ phát triển, sửa đổi các hệ thống SW thuận tiện | - Tự động hóa 80% tác vụ<br>- Ước lệ: Giảm 50% thời gian phản hồi sự cố - Rủi ro: vendor lock-in cao | - Tuân thủ 100% chuẩn ISO<br>- Ước lệ: Giảm 70% rủi ro nội bộ - Rủi ro: vendor lock-in cao |
 
 ---
 
