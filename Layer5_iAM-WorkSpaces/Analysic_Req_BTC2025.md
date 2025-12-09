@@ -48,7 +48,7 @@ Tham khảo bài phân tích 11 nhóm chủ đề cần triển khai theo yêu c
     *   **Yêu cầu chính:** Quản lý vòng đời tài khoản, quy trình yêu cầu và phê duyệt quyền, rà soát quyền truy cập định kỳ, phân tách quyền (SOD).
 
 về phía công ty Hipt có năng lực giải pháp cho nhóm 1 và 2.
-Tham khảo bài viết tổng hợp hợp Giải pháp 1. GP1. Keycloak SSO/MFA tích hợp SIEM ELK với Wazhu với OpenCTI NDR thuộc giải pháp của HiPT-AT.COM chuyên subcription support 5 năm ( iamplatform4campus/Layer5_iAM-WorkSpaces/cybersecurity.md) file uploaded: cybersecurity.md
+Tham khảo bài viết tổng hợp hợp Giải pháp 1. GP1. Keycloak SSO/MFA tích hợp SIEM ELK với Wazhu với OpenCTI NDR thuộc giải pháp của HiPT chuyên subcription support 5 năm ( iamplatform4campus/Layer5_iAM-WorkSpaces/cybersecurity.md) file uploaded: cybersecurity.md
 
 Hãy giúp tôi phân tích các tham khảo trên và kiểm tra giữa bài viết tổng hợp hợp Giải pháp 1. GP1.file uploaded: cybersecurity.md với yêu cầu phụ lục 1, phụ luc 2 để xác định đúng khả năng kỹ thuật của Giải pháp 1 là đáp ứng yêu cầu trong công văn báo giá BTC?
 
@@ -56,7 +56,7 @@ Hãy giúp tôi phân tích các tham khảo trên và kiểm tra giữa bài vi
 
 ### **Kết Luận Chung**
 
-**Giải pháp 1 (GP1) của HiPT-AT.COM có khả năng đáp ứng đầy đủ và vượt trội các yêu cầu kỹ thuật cho Hạng mục 1 (Hệ thống xác thực đa nhân tố - MFA) và Hạng mục 2 (Hệ thống quản lý định danh và xác thực điện tử tập trung - IAM) trong công văn của Bộ Tài chính.**
+**Giải pháp 1 (GP1) của HiPT có khả năng đáp ứng đầy đủ và vượt trội các yêu cầu kỹ thuật cho Hạng mục 1 (Hệ thống xác thực đa nhân tố - MFA) và Hạng mục 2 (Hệ thống quản lý định danh và xác thực điện tử tập trung - IAM) trong công văn của Bộ Tài chính.**
 
 Không chỉ đáp ứng các yêu cầu cơ bản, GP1 còn cung cấp một hệ sinh thái bảo mật tích hợp sâu, mở rộng và phù hợp với các xu hướng bảo mật hiện đại như Zero Trust và AI/ML, đồng thời tuân thủ các tiêu chuẩn quốc tế như ISO 27001 và SOC 2.
 
@@ -96,9 +96,9 @@ Dưới đây là bảng so sánh chi tiết giữa yêu cầu của BTC và kh�
 
 ### **Kết Luận Cuối Cùng**
 
-**Giải pháp 1 (GP1) của HiPT-AT.COM không chỉ đáp ứng các yêu cầu kỹ thuật đã được nêu trong công văn của Bộ Tài chính mà còn vượt xa các yêu cầu đó bằng cách cung cấp một hệ sinh thái bảo mật tích hợp, thông minh và có tầm nhìn xa.**
+**Giải pháp 1 (GP1) của HiPT không chỉ đáp ứng các yêu cầu kỹ thuật đã được nêu trong công văn của Bộ Tài chính mà còn vượt xa các yêu cầu đó bằng cách cung cấp một hệ sinh thái bảo mật tích hợp, thông minh và có tầm nhìn xa.**
 
-Sự kết hợp giữa **Keycloak** (một chuẩn mực cho MFA/SSO mã nguồn mở), **nền tảng IAM của HiPT** (với khả năng tùy biến sâu cho hệ thống legacy của Việt Nam), và **hệ thống SIEM/EDR (ELK/Wazuh/OpenCTI)** tạo ra một giải pháp toàn diện, giúp Bộ Tài chính không chỉ giải quyết các vấn đề bảo mật hiện tại mà còn xây dựng một nền tảng vững chắc cho tương lai. Gói hỗ trợ subscription 5-10 năm của HiPT-AT.COM là yếu tố đảm bảo sự thành công và ổn định của giải pháp này trong dài hạn.
+Sự kết hợp giữa **Keycloak** (một chuẩn mực cho MFA/SSO mã nguồn mở), **nền tảng IAM của HiPT** (với khả năng tùy biến sâu cho hệ thống legacy của Việt Nam), và **hệ thống SIEM/EDR (ELK/Wazuh/OpenCTI)** tạo ra một giải pháp toàn diện, giúp Bộ Tài chính không chỉ giải quyết các vấn đề bảo mật hiện tại mà còn xây dựng một nền tảng vững chắc cho tương lai. Gói hỗ trợ subscription 5 năm của HiPT là yếu tố đảm bảo sự thành công và ổn định của giải pháp này trong dài hạn.
 
 ---
 
@@ -112,17 +112,17 @@ Sự kết hợp giữa **Keycloak** (một chuẩn mực cho MFA/SSO mã nguồ
 graph TD
     %% Tầng Người Dùng và Truy Cập
     subgraph "Tầng 1: Người Dùng & Truy Cập"
-        A[Người dùng<br>(Cán bộ Bộ Tài chính)]
-        B[Keycloak<br>(SSO / MFA / IdP)]
+        A["Người dùng<br>(Cán bộ Bộ Tài chính)"]
+        B["Keycloak<br>(SSO / MFA / IdP)"]
         A -- "1. Yêu cầu truy cập ứng dụng" --> B
         B -- "2. Xác thực đa nhân tố (MFA)" --> A
     end
 
     %% Tầng Quản lý Định danh (IAM)
     subgraph "Tầng 2: Quản lý Định danh & Quản trị (IAM)"
-        C[HiPT iAM Platform<br>(Quản lý vòng đời, quy trình, SOD)]
-        D[AD-DC Global<br>(4 máy chủ - Nguồn định danh chính)]
-        E[Ứng dụng Legacy<br>(.NET, MVC, Power BI, v.v.)]
+        C["HiPT iAM Platform<br>(Quản lý vòng đời, quy trình, SOD)"]
+        D["AD-DC Global<br>(4 máy chủ - Nguồn định danh chính)"]
+        E["Ứng dụng Legacy<br>(.NET, MVC, Power BI, v.v.)"]
         
         C -- "Quản lý & Đồng bộ" --> B
         D -- "LDAP/LDAPS" --> B
@@ -133,11 +133,11 @@ graph TD
 
     %% Tầng Giám sát An ninh (SOC)
     subgraph "Tầng 3: Giám sát An ninh & Vận hành (SOC)"
-        F[Wazuh Agents<br>(HIDS/EDR/VM trên 2300 endpoints)]
-        G[ELK Stack<br>(Elasticsearch, Logstash, Kibana)]
-        H[OpenCTI<br>(Threat Intelligence Platform)]
-        I[NDR Sensors<br>(Network Detection & Response)]
-        J[SOC Dashboard<br>(Kibana) cho Đội an ninh]
+        F["Wazuh Agents<br>(HIDS/EDR/VM trên 2300 endpoints)"]
+        G["ELK Stack<br>(Elasticsearch, Logstash, Kibana)"]
+        H"[OpenCTI<br>(Threat Intelligence Platform)"]
+        I["NDR Sensors<br>(Network Detection & Response)"]
+        J["SOC Dashboard<br>(Kibana) cho Đội an ninh"]
 
         F -- "Gửi log & cảnh báo" --> G
         I -- "Gửi log luồng mạng" --> G
@@ -150,8 +150,8 @@ graph TD
 
     %% Tầng Hạ tầng và Hỗ trợ
     subgraph "Tầng 4: Hạ tầng & Hỗ trợ"
-        K[Hạ tầng On-premise<br>(Server, Mạng, Lưu trữ tại TTDL Bộ TC)]
-        L[HiPT-AT.COM<br>(Subscription Support 5-10 năm)]
+        K["Hạ tầng On-premise<br>(Server, Mạng, Lưu trữ tại TTDL Bộ TC)"]
+        L["HiPT<br>(Subscription Support 5-10 năm)"]
     end
     
     %% Kết nối hạ tầng
@@ -202,10 +202,6 @@ graph TD
 
 4.  **Tầng 4: Hạ tầng & Hỗ trợ**
     *   Toàn bộ giải pháp được triển khai trên **hạ tầng On-premise** của Bộ Tài chính, đảm bảo chủ quyền dữ liệu.
-    *   **HiPT-AT.COM** cung cấp gói hỗ trợ dài hạn (5-10 năm), đảm bảo hệ thống luôn được vận hành ổn định, cập nhật bảo mật và xử lý các sự cố phát sinh.
+    *   **HiPT** cung cấp gói hỗ trợ dài hạn (5-10 năm), đảm bảo hệ thống luôn được vận hành ổn định, cập nhật bảo mật và xử lý các sự cố phát sinh.
 
 Kiến trúc này thể hiện một giải pháp bảo mật đa lớp, tích hợp chặt chẽ, không chỉ giải quyết các vấn đề về xác thực và quản lý truy cập (IAM) mà còn cung cấp khả năng giám sát, phát hiện và phản ứng sự cố toàn diện (SOC).
-
-
-
-
