@@ -135,7 +135,7 @@ graph TD
     subgraph "Tầng 3: Giám sát An ninh & Vận hành (SOC)"
         F["Wazuh Agents<br>(HIDS/EDR/VM trên 2300 endpoints)"]
         G["ELK Stack<br>(Elasticsearch, Logstash, Kibana)"]
-        H"[OpenCTI<br>(Threat Intelligence Platform)"]
+        H["OpenCTI<br>(Threat Intelligence Platform)"]
         I["NDR Sensors<br>(Network Detection & Response)"]
         J["SOC Dashboard<br>(Kibana) cho Đội an ninh"]
 
