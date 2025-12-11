@@ -24,6 +24,8 @@ Bằng cách áp dụng Zero Trust, các tổ chức có thể giảm đáng k�
 
 Dưới đây là sơ đồ Mermaid được chuyển đổi từ hình ảnh trong bài viết, mô tả sự khác biệt giữa **Mô hình An ninh Truyền thống** và **Mô hình An ninh Zero Trust**. Toàn bộ văn bản trong sơ đồ đều bằng tiếng Việt.
 
+![image](https://raw.githubusercontent.com/PhDLeToanThang/iamplatform4campus/8442f7fccec07f551d092657d40a9cda3c20fa76/Layer5_iAM-WorkSpaces/Pentest_CyberSecurity-Zero_Trust.drawio.svg?token=AZNSDVL525WNBTPUOVMGU2DJHJZ3M) 
+
 Bạn có thể sao chép mã này và dán vào bất kỳ trình chỉnh sửa hỗ trợ Mermaid nào (như draw.io, VS Code với extension Mermaid, hoặc các công cụ trực tuyến) để hiển thị sơ đồ.
 
 ```mermaid
