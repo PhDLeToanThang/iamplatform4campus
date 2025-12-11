@@ -201,3 +201,5 @@ graph TD
     style FinalThoughts fill:#f0f0f0,stroke:#666,stroke-width:2px,color:#333
     style inv fill:#ffffff,stroke:#ffffff,stroke-width:0px
 ```
+
+![image](https://raw.githubusercontent.com/PhDLeToanThang/iamplatform4campus/58308b2d98f2ef8a9054f3b894b2b4ee68e7754f/Layer5_iAM-WorkSpaces/Pentest_CyberSecurity-CyberSecurity_Modern.drawio.svg?token=AZNSDVIOW6OD3AXESEIBS6LJHJYDE)
