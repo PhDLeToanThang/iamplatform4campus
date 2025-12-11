@@ -5,8 +5,11 @@ Trong bối cảnh cảnh quan kỹ thuật số ngày càng phát triển, các
 Đây là lúc mô hình **Zero Trust** ra đời. Zero Trust là một mô hình an ninh chủ động, không bị động, hoạt động dựa trên nguyên tắc "không bao giờ tin tưởng, luôn luôn xác minh". Nó giả định rằng có sự xâm nhập và xác minh từng yêu cầu truy cập, bất kể nó đến từ đâu.
 
 **Các nguyên tắc cốt lõi của Zero Trust bao gồm:**
+
 ✅ Quyền truy cập tối thiểu
+
 ✅ Phân đoạn vi mô
+
 ✅ Giám sát liên tục
 
 Bằng cách áp dụng Zero Trust, các tổ chức có thể giảm đáng kể bề mặt tấn công của mình và cải thiện đáng kể tư thế an ninh tổng thể.
@@ -24,9 +27,9 @@ Dưới đây là sơ đồ Mermaid được chuyển đổi từ hình ảnh tr
 Bạn có thể sao chép mã này và dán vào bất kỳ trình chỉnh sửa hỗ trợ Mermaid nào (như draw.io, VS Code với extension Mermaid, hoặc các công cụ trực tuyến) để hiển thị sơ đồ.
 
 ```mermaid
-graph td
+graph TD
     %% Mô hình An ninh Truyền thống
-    subgraph Mô_hình_An_ninh_Truyển_thống["Mô hình An ninh Truyền thống"]
+    subgraph Mo_hinh_An_ninh_Truyen_thong["Mô hình An ninh Truyền thống"]
         direction TB
         FW["🔥<b>Tường lửa</b>"]
         Perimeter["<b>Mạng / Vùng Giới</b><br>(Được tin tưởng bên trong)"]
@@ -43,7 +46,7 @@ graph td
     end
 
     %% Mô hình An ninh Zero Trust
-    subgraph Mô_hình_An_ninh_Zero_Trust["Mô hình An ninh Zero Trust"]
+    subgraph Mo_hinh_An_ninh_Zero_Trust["Mô hình An ninh Zero Trust"]
         direction TB
         ZT_Principle["<b>Không bao giờ tin tưởng<br>Luôn luôn xác minh</b>"]
 
@@ -63,8 +66,8 @@ graph td
     end
     
     %% Styling chung
-    style Mô_hình_An_ninh_Truyển_thống fill:#fff,stroke:#333,stroke-width:2px
-    style Mô_hình_An_ninh_Zero_Trust fill:#fff,stroke:#333,stroke-width:2px
+    style Mo_hinh_An_ninh_Truyen_thong fill:#fff,stroke:#333,stroke-width:2px
+    style Mo_hinh_An_ninh_Zero_Trust fill:#fff,stroke:#333,stroke-width:2px
 
 ```
 
