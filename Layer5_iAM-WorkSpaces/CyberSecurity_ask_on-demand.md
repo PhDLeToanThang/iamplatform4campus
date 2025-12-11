@@ -204,4 +204,4 @@ graph TD
     style inv fill:#ffffff,stroke:#ffffff,stroke-width:0px
 ```
 
-![image](https://raw.githubusercontent.com/PhDLeToanThang/iamplatform4campus/58308b2d98f2ef8a9054f3b894b2b4ee68e7754f/Layer5_iAM-WorkSpaces/Pentest_CyberSecurity-CyberSecurity_Modern.drawio.svg?token=AZNSDVIOW6OD3AXESEIBS6LJHJYDE)
+![image](https://raw.githubusercontent.com/PhDLeToanThang/iamplatform4campus/7235e8f8985cd9ab9328b922fd9812de8b8d5321/Layer5_iAM-WorkSpaces/Pentest_CyberSecurity-CyberSecurity_Modern.drawio.svg?token=AZNSDVIMGYWWKZZB7XDKW4TJHJ2EE)
